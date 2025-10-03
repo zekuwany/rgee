@@ -53,12 +53,12 @@ library(rgee)
 ## For Anaconda users - Windows OS
 ## OBS: Anaconda Python PATH can vary, run “where anaconda” in console.
 # win_py_path = paste0(
-#    "C:/Users/UNICORN/AppData/Local/Programs/Python/",
-#    "Python37/python.exe"
+#    "C:/Users/Zekuwan/miniconda3/envs/rgee_py/",
+#    "Python3.11/python.exe"
 # )
 # ee_install_set_pyenv(
 #   py_path = win_py_path,
-#   py_env = "rgee" # Change it for your own Python ENV
+#   py_env = "rgee_py" # Change it for your own Python ENV
 # )
 
 ## For Anaconda users - MacOS users
@@ -69,12 +69,12 @@ library(rgee)
 #
 ## For Miniconda users - Windows OS
 # win_py_path = paste0(
-#   "C:/Users/UNICORN/AppData/Local/r-miniconda/envs/rgee/",
+#   "C:/Users/UNICORN/AppData/Local/miniconda3/envs/rgee_py/",
 #   "python.exe"
 # )
 # ee_install_set_pyenv(
 #   py_path = win_py_path,
-#   py_env = "rgee" # Change it for your own Python ENV
+#   py_env = "rgee_py" # Change it for your own Python ENV
 # )
 
 ## For Miniconda users - Linux/MacOS users
