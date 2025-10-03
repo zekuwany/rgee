@@ -98,7 +98,7 @@ image$bandNames()$getInfo()
 library(rgee)
 
 # Set your Python ENV
-Sys.setenv("RETICULATE_PYTHON" = "/C:Users/Zekuean/miniconda3/envs/rgee_py")
+Sys.setenv("RETICULATE_PYTHON" = "/C:Users/Zekuwan/miniconda3/envs/rgee_py")
 
 # Set Google Cloud SDK. Only need it the first time you log in. 
 Sys.setenv("EARTHENGINE_GCLOUD" = "C:/Program Files (x86)/Google/Cloud SDK/google-cloud-sdk/bin/")
@@ -153,8 +153,8 @@ reticulate::install_miniconda()
 system("curl -sSL https://sdk.cloud.google.com | bash")
 
 # 3 Set global parameters
-Sys.setenv("RETICULATE_PYTHON" = sprintf("%s/C:Users/Zekuean/miniconda3/envs/rgee_py", HOME))
-Sys.setenv("EARTHENGINE_GCLOUD" = sprintf("%s/google-cloud-sdk/bin/", HOME))
+Sys.setenv("RETICULATE_PYTHON" = sprintf("%s/C:/Users/Zekuwan/miniconda3/envs/rgee_py", HOME))
+Sys.setenv("EARTHENGINE_GCLOUD" = sprintf("%s/C:/Program Files (x86)/Google/Cloud SDK/google-cloud-sdk/bin/", HOME))
 
 # 4 Install rgee Python dependencies
 ee_install() 
@@ -192,7 +192,7 @@ rgee::ee_install_set_pyenv(
 )
 ```
 
-However, [**rgee::ee_install_upgrade**](https://r-spatial.github.io/rgee/reference/ee_install_upgrade.html) and [**reticulate::py_install**](https://rstudio.github.io/reticulate/reference/py_install.html) will not work until you have set up a Python ENV.
+However, [**rgee::ee_install_upgrade**](https://zekuwany.github.io/rgee/reference/ee_install_upgrade.html) and [**reticulate::py_install**](https://rstudio.github.io/reticulate/reference/py_install.html) will not work until you have set up a Python ENV.
 
 3.  Use the Python PATH setting support that offer [Rstudio v.1.4 \>](https://blog.rstudio.com/2020/10/07/rstudio-v1-4-preview-python-support/). See this [tutorial](https://github.com/r-spatial/rgee/tree/help/rstudio/).
 
@@ -274,7 +274,7 @@ ee_print(col_reduce)
 Let's visualize our map!
 
 ``` r
-Map$setCenter(9.08203, 47.39835, 3)
+Map$setCenter(41.73, 9.25, 8)
 Map$addLayer(
   eeObject = col_reduce,
   visParams = list(
