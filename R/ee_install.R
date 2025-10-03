@@ -36,7 +36,7 @@
 #' @export
 ee_install <- function(py_env = "rgee",
                        earthengine_version = ee_version(),
-                       python_version = "3.13",
+                       python_version = "3.11",
                        confirm = interactive()) {
 
   #check packages
@@ -58,10 +58,10 @@ ee_install <- function(py_env = "rgee",
       "in your system. Run as follow to solve:",
       bold("- Using the rgee API:"),
       "1. rgee::ee_clean_pyenv()",
-      "2. rgee::ee_install_set_pyenv(py_path = \"YOUR_PYTHON_PATH_GOES_HERE\")",
+      "2. rgee::ee_install_set_pyenv(py_path = \"C:\Users\Zekuwan\miniconda3\envs\rgee_py\")",
       "3. Restart your system.",
       bold("- Using Rstudio 1.4:"),
-      "   https://github.com/r-spatial/rgee/tree/help/rstudio/",
+      "   https://github.com/zekuwany/rgee/tree/help/rstudio/",
       sep = "\n"
     )
     message(text)
@@ -300,38 +300,38 @@ ee_install <- function(py_env = "rgee",
 #' ## For Anaconda users - Windows OS
 #' ## OBS: Anaconda Python PATH can vary, run “where anaconda” in console.
 #' # win_py_path = paste0(
-#' #    "C:/Users/UNICORN/AppData/Local/Programs/Python/",
+#' #    "C:/Users/Zekuwan/miniconda3/envs/rgee_py/",
 #' #    "Python37/python.exe"
 #' # )
 #' # ee_install_set_pyenv(
 #' #   py_path = win_py_path,
-#' #   py_env = "rgee" # Change it for your own Python ENV
+#' #   py_env = "rgee_py" # Change it for your own Python ENV
 #' # )
 #'
 #' ## For Anaconda users - MacOS users
 #' # ee_install_set_pyenv(
-#' #   py_path = "/Users/UNICORN/opt/anaconda3/bin/python",
-#' #   py_env = "rgee" # Change it for your own Python ENV
+#' #   py_path = "/Users/Zekuwan/miniconda3/envs/rgee_py",
+#' #   py_env = "rgee_py" # Change it for your own Python ENV
 #' # )
 #' #
 #' ## For Miniconda users - Windows OS
 #' # win_py_path = paste0(
-#' #   "C:/Users/UNICORN/AppData/Local/r-miniconda/envs/rgee/",
+#' #   "C:/Users/Zekuwan//miniconda3/envs/rgee_py/",
 #' #   "python.exe"
 #' # )
 #' # ee_install_set_pyenv(
 #' #   py_path = win_py_path,
-#' #   py_env = "rgee" # Change it for your own Python ENV
+#' #   py_env = "rgee_py" # Change it for your own Python ENV
 #' # )
 #'
 #' ## For Miniconda users - Linux/MacOS users
 #' # unix_py_path = paste0(
-#' #   "/home/UNICORN/.local/share/r-miniconda/envs/",
-#' #   "rgee/bin/python3"
+#' #   "/home/Zekuwan/.local/share/miniconda3/envs/",
+#' #   "rgee_py/bin/python3"
 #' # )
 #' # ee_install_set_pyenv(
 #' #   py_path = unix_py_path,
-#' #   py_env = "rgee" # Change it for your own Python ENV
+#' #   py_env = "rgee_py" # Change it for your own Python ENV
 #' # )
 #'
 #' ## For virtualenv users - Linux/MacOS users
@@ -497,7 +497,7 @@ ee_install_set_init_message <- function() {
 #' @importFrom reticulate conda_create virtualenv_create
 #' @return Character. The path of the virtual environment created.
 #' @noRd
-ee_install_create_pyenv <- function(python_version, py_env = "rgee") {
+ee_install_create_pyenv <- function(python_version, py_env = "rgee_py") {
   #Check is Python is greather than 3.5
   ee_check_python(quiet = TRUE)
   if (is_windows()) {
