@@ -5,9 +5,9 @@
 \title{Create an isolated Python virtual environment with all rgee dependencies.}
 \usage{
 ee_install(
-  py_env = "rgee",
+  py_env = "rgee_py",
   earthengine_version = ee_version(),
-  python_version = "3.8",
+  python_version = "3.11",
   confirm = interactive()
 )
 }
@@ -20,7 +20,7 @@ to install. By default \code{rgee::ee_version()}.}
 
 \item{python_version}{Only Windows users. The Python version to be used
 in this conda environment. If set to NULL, the default Python package will be used.
-For example, you can specify python_version = "3.6" to request the creation of the
+For example, you can specify python_version = "3.11" to request the creation of the
 conda environment with a copy of Python 3.6.}
 
 \item{confirm}{Logical. Confirm before restarting R?.}
