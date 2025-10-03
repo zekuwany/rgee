@@ -98,10 +98,10 @@ image$bandNames()$getInfo()
 library(rgee)
 
 # Set your Python ENV
-Sys.setenv("RETICULATE_PYTHON" = "/usr/bin/python3")
+Sys.setenv("RETICULATE_PYTHON" = "/C:Users/Zekuean/miniconda3/envs/rgee_py")
 
 # Set Google Cloud SDK. Only need it the first time you log in. 
-Sys.setenv("EARTHENGINE_GCLOUD" = "home/csaybar/google-cloud-sdk/bin/")
+Sys.setenv("EARTHENGINE_GCLOUD" = "C:/Program Files (x86)/Google/Cloud SDK/google-cloud-sdk/bin/")
 ee_Authenticate()
 
 # Initialize your Earth Engine Session 
@@ -153,7 +153,7 @@ reticulate::install_miniconda()
 system("curl -sSL https://sdk.cloud.google.com | bash")
 
 # 3 Set global parameters
-Sys.setenv("RETICULATE_PYTHON" = sprintf("%s/.local/share/r-miniconda/bin/python3", HOME))
+Sys.setenv("RETICULATE_PYTHON" = sprintf("%s/C:Users/Zekuean/miniconda3/envs/rgee_py", HOME))
 Sys.setenv("EARTHENGINE_GCLOUD" = sprintf("%s/google-cloud-sdk/bin/", HOME))
 
 # 4 Install rgee Python dependencies
@@ -166,18 +166,18 @@ ee_Initialize(project = "my-project-id")
 
 There are three (3) different ways to install rgee Python dependencies:
 
-1.  Use [**ee_install**](https://r-spatial.github.io/rgee/reference/ee_install.html) (Highly recommended for users with no experience with Python environments)
+1.  Use [**ee_install**](https://zekuwany.github.io/rgee/reference/ee_install.html) (Highly recommended for users with no experience with Python environments)
 
 ``` r
 rgee::ee_install()
 ```
 
-2.  Use [**ee_install_set_pyenv**](https://r-spatial.github.io/rgee/reference/ee_install_set_pyenv.html) (Recommended for users with experience in Python environments)
+2.  Use [**ee_install_set_pyenv**](https://zekuwany.github.io/rgee/reference/ee_install_set_pyenv.html) (Recommended for users with experience in Python environments)
 
 ``` r
 rgee::ee_install_set_pyenv(
-  py_path = "/home/csaybar/.virtualenvs/rgee/bin/python", # Change it for your own Python PATH
-  py_env = "rgee" # Change it for your own Python ENV
+  py_path = "/C:/Users/Zekuwan/miniconda3/envs/rgee_py", # Change it for your own Python PATH
+  py_env = "rgee_py" # Change it for your own Python ENV
 )
 ```
 
@@ -187,7 +187,7 @@ If you are using MacOS or Linux, you can choose setting the Python PATH directly
 
 ``` r
 rgee::ee_install_set_pyenv(
-  py_path = "/usr/bin/python3",
+  py_path = "/C:/Users/Zekuwan/miniconda3/envs/rgee_py",
   py_env = NULL
 )
 ```
